@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Open+Sans&family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* creating color variables i will use */
+
+:root {
+  --white-color: #f8fafc;
+  --black-color: #020617;
+  --dashboard-color: #334155;
+  --backgound-color: #e2e8f0;
+}
+/* add background and main font */
+
+body {
+  background-color: var(--backgound-color);
+  font-family: "Roboto", sans-serif;
+}
+
+/* add the final grid  final template for the entire page*/
+
+.mainContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 220px 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "dashboard nav nav nav"
+    "dashboard main main side"
+    "dashboard main main side"
+    "dashboard main main side";
+}
+
+.leftContainer {
+  background-color: var(--dashboard-color);
+  grid-area: dashboard;
+  color: var(--white-color);
+  fill: var(--white-color);
+  display: grid;
+  grid-template-rows: 20px 1fr 1fr;
+  gap: 50px;
+  font-size: 13px;
+  padding: 20px;
+
+}
+
+.dashboard-logo{
+height: 40px;
+
+}
+
+svg {
+  height: 25px;
+
+}
+
+.firstBatch{
+    display: grid;
+    grid-template-columns:40px 1fr;
+    grid-template-rows: repeat(1, 40px);
+}
+
+.secondBatch{
+
+display: grid;
+grid-template-columns:40px 1fr;
+grid-template-rows: repeat(6, 40px);
+gap:10px;
+
+}
+
+.thirdBatch{
+    display: grid;
+    grid-template-columns:40px 1fr;
+    grid-template-rows: repeat(3, 40px);
+    gap: 5px;
+
+}
+
+.leftContainer h3,svg, h2 {
+
+    align-self: center;
+}
